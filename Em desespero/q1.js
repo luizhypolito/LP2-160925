@@ -1,30 +1,22 @@
-let teste = []
+let teste  = []
 let indiceMaior = 0
-let indiceMenor = 0
 
-for (i = 0; i < 5; i++) {
+for(i = 0; i < 5; i++){
 
-    let itens = prompt("Digite o valor do produto: ")
-    teste.push(itens)
+    let produtos = prompt("digite o produto pae")
+    produtos = Number(produtos)
+    teste.push(produtos)
 }
 
-let maior = teste[0]
-let menor = teste[0]
+let maior = 0
 
-for (i = 0; i < 5; i++) {
+for(i = 0; i < 5; i++){
 
-    if (teste[i] > maior) {
+    if(teste[i] > maior){
 
         maior = teste[i]
         indiceMaior = i
     }
-
-    if (teste[i] < menor) {
-
-        menor = teste[i]
-        indiceMenor = i
-    }
 }
 
-console.log('O indice do produto maior é ${indiceMaior}')
-console.log('O indice do produto menor é ${indiceMenor}')
+console.log(`O produto mais caro ${maior} e o indice dele é ${indiceMaior}`)
